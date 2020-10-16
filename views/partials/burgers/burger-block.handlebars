@@ -1,13 +1,13 @@
-<li>
+<p class="border border-dark">
     {{name}}
 
     {{#unless isDevoured}}
-    <button class="change-devour btn btn-outline-dark" data-id="{{id}}" data-newdevour="{{isDevoured}}">
+    <button class="change-devour btn btn-outline-dark float-right" data-id="{{id}}" data-newdevour="{{isDevoured}}">
         <i class="fas fa-utensils"></i>
     </button>
     {{/unless}}
     
-    <button class="delete-burger btn btn-outline-dark" data-id="{{this.id}}">
+    <button class="delete-burger btn btn-outline-dark float-right" style="vertical-align: middle" data-id="{{this.id}}">
         <i class="fas fa-trash-alt"></i>
     </button>
-</li>
+</p>

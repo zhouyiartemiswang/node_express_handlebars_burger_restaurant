@@ -1,27 +1,43 @@
 body {
-
+    font-family: 'Chilanka', cursive;  
+    font-size: 1.5rem;
 }
 
 h1 {
     font-family: 'Luckiest Guy', cursive;
+    font-size: 6rem;
+    margin-top: 2rem;
 }
 
-li {
-  padding: 5px;
-  margin: 5px;
-  list-style-type: none;
+#ca {
+    height: 4rem;
+    font-size: 1.5rem;
+    padding-left: 2rem;
 }
 
-.label {
-  font-weight: bold;
+
+#submit-btn {
+    height: 4rem;
+    font-size: 1.5rem;
+    width: 8rem;
 }
 
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
+p {
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 0.8rem;
 }
 
-.form-group {
-  margin-bottom: 5px;
+.card {
+    margin: 2rem;
+    border-radius: 1rem;
+    border-width: 0.6rem;
 }
+
+.card-title {
+    font-family: 'Patua One', cursive;
+    font-size: 2rem;
+    padding-bottom: 0;
+}
+
+

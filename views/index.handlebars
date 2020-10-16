@@ -1,11 +1,10 @@
 <div class="container-fluid">
     <nav class="row">
         <div class="col-md-12">
-            <div class="jumbotron jumbotron-fluid">
+            <div class="jumbotron jumbotron-fluid bg-dark text-white text-center">
                 <div class="container">
                     <i class="fas fa-hamburger fa-5x"></i>
-                    <h1 class="display-4">Eat-Da-Burger</h1>
-                    <p>Enter a burger to eat.</p>
+                    <h1>Eat-Da-Burger</h1>
                 </div>
             </div>
         </div>
@@ -15,49 +14,51 @@
             <form class="create-form">
                 <div class="form-row justify-content-center">
                     <div class="col-md-3">
-                        <input type="text" class="form-control mb-5" id="ca" name="name"
+                        <input type="text" class="form-control form-control-xl mb-3" id="ca" name="name"
                             placeholder="Enter burger here...">
                     </div>
                     <div class="col-md-1">
-                        <button type="submit" class="btn btn-dark">Submit</button>
+                        <button type="submit" class="btn btn-dark" id="submit-btn">Submit</button>
                     </div>
                 </div>
             </form>
         </section>
     </section>
     <section class="row justify-content-center">
-        <article class="col-md-3">
-            <div class="card border-dark mb-3">
-                <div class="card-header">Hungry? Have some burgers!</div>
+
+        <article class="col-md-4">
+            <div class="card border-dark mb-5 h-100">
+                <p class="card-title">Hungry? Have some burgers!</p>
                 <div class="card-body text-dark">
-                    <ul>
-                        {{#each burgers}}
-                        {{#unless isDevoured}}
-                        {{> burgers/burger-block devour=true}}
-                        {{/unless}}
-                        {{/each}}
-                    </ul>
-                </div>
-            </div>
-
-        </article>
-        <article class="col-md-3">
-            <div class="card border-dark mb-3">
-                <div class="card-header">Whoa! You ate these...</div>
-                <div class="card-body text-dark">
-
-                    <ul>
-                        {{#each burgers}}
-                        {{#if isDevoured}}
-                        {{> burgers/burger-block devour=false}}
-                        {{/if}}
-                        {{/each}}
-                    </ul>
-
+                    {{#each burgers}}
+                    {{#unless isDevoured}}
+                    {{> burgers/burger-block devour=true}}
+                    {{/unless}}
+                    {{/each}}
                 </div>
             </div>
         </article>
+
+        <article class="col-md-4">
+            <div class="card border-dark mb-5 h-100">
+                <p class="card-title">Whoa! You ate these...</p>
+                <div class="card-body text-dark">
+                    {{#each burgers}}
+                    {{#if isDevoured}}
+                    {{> burgers/burger-block devour=false}}
+                    {{/if}}
+                    {{/each}}
+                </div>
+            </div>
+        </article>
+
     </section>
+    <footer class="row text-center">
+        <div class="col-md-12">
+            <span>Click <i class="fas fa-utensils"></i> to devour and click <i class="fas fa-trash-alt"></i> to trash
+                any burgers.</span>
+        </div>
+    </footer>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
