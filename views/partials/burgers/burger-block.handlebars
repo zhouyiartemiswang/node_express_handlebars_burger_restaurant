@@ -1,9 +1,13 @@
 <li>
-	{{name}}
+    {{name}}
 
-	<button class="change-devour" data-id="{{id}}" data-newdevour="{{isDevoured}}">
-		{{#if isDevoured}}Gone!{{else}}Devour it!{{/if}}
-	</button>
-
-	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+    {{#unless isDevoured}}
+    <button class="change-devour btn btn-outline-dark" data-id="{{id}}" data-newdevour="{{isDevoured}}">
+        <i class="fas fa-utensils"></i>
+    </button>
+    {{/unless}}
+    
+    <button class="delete-burger btn btn-outline-dark" data-id="{{this.id}}">
+        <i class="fas fa-trash-alt"></i>
+    </button>
 </li>
