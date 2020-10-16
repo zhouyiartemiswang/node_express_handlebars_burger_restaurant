@@ -1,0 +1,74 @@
+<div class="container-fluid">
+    <nav class="row">
+        <div class="col-md-12">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <i class="fas fa-hamburger fa-5x"></i>
+                    <h1 class="display-4">Eat-Da-Burger</h1>
+                    <p>Enter a burger to eat.</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="row">
+        <section class="col-md-12">
+            <form class="create-form">
+                <div class="form-row justify-content-center">
+                    <div class="col-md-3">
+                        <input type="text" class="form-control mb-5" id="ca" name="name"
+                            placeholder="Enter burger here...">
+                    </div>
+                    <div class="col-md-1">
+                        <button type="submit" class="btn btn-dark">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </section>
+    <section class="row justify-content-center">
+        <article class="col-md-3">
+            <div class="card border-dark mb-3">
+                <div class="card-header">Header</div>
+                <div class="card-body text-dark">
+                    <h5 class="card-title">Dark card title</h5>
+                    <h2> Burgers that are not devoured!</h2>
+
+                    <ul>
+                        {{#each burgers}}
+                        {{#unless isDevoured}}
+                        {{> burgers/burger-block devour=true}}
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+
+        </article>
+        <article class="col-md-3">
+            <div class="card border-dark mb-3">
+                <div class="card-header">Header</div>
+                <div class="card-body text-dark">
+                    <h5 class="card-title">Dark card title</h5>
+
+                    <ul>
+                        {{#each burgers}}
+                        {{#if isDevoured}}
+                        {{> burgers/burger-block devour=false}}
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+
+                </div>
+            </div>
+        </article>
+    </section>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
