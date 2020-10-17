@@ -33,7 +33,7 @@ Click `trash bin` icon to delete a burger.
 
 ![screenshot](./public/assets/image/screenshot.png)
 
-Please see deployed application [here]
+Please see deployed application [here](https://mighty-wave-39082.herokuapp.com/).
 
 
 ## License
