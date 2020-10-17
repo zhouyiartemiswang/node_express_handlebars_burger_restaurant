@@ -1,13 +1,8 @@
-<p class="border border-dark">
+<p class="border border-dark" id="burger-item">
     {{name}}
 
+    <i class="fas fa-trash-alt float-right delete-burger" data-id="{{this.id}}"></i></i>
     {{#unless isDevoured}}
-    <button class="change-devour btn btn-outline-dark float-right" data-id="{{id}}" data-newdevour="{{isDevoured}}">
-        <i class="fas fa-utensils"></i>
-    </button>
+    <i class="fas fa-utensils float-right change-devour " data-id="{{id}}" data-newdevour=></i>
     {{/unless}}
-    
-    <button class="delete-burger btn btn-outline-dark float-right" style="vertical-align: middle" data-id="{{this.id}}">
-        <i class="fas fa-trash-alt"></i>
-    </button>
 </p>

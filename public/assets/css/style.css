@@ -1,6 +1,7 @@
 body {
     font-family: 'Chilanka', cursive;  
     font-size: 1.5rem;
+    min-height: 100vh;
 }
 
 h1 {
@@ -13,19 +14,27 @@ h1 {
     height: 4rem;
     font-size: 1.5rem;
     padding-left: 2rem;
+    padding-bottom: 0;
+    border-radius: 0.8rem;
 }
-
 
 #submit-btn {
     height: 4rem;
     font-size: 1.5rem;
     width: 8rem;
+    border-radius:0.8rem;
+    padding-bottom: 0;
 }
 
 p {
     padding: 1rem;
     margin: 1rem;
     border-radius: 0.8rem;
+    padding-bottom: 0.5rem;
+}
+
+.change-devour {
+    margin-right: 1rem;
 }
 
 .card {
